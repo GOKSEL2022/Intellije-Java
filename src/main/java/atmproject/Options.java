@@ -10,6 +10,7 @@ public class Options extends Account{
     HashMap<Integer, Integer> data = new HashMap<>();
     public void login(){
         System.out.println("Techproed ATM'e hos geldiniz!");
+        int counter = 0;
         do {
             data.put(12345, 1234);
             data.put(23456, 2345);
@@ -37,7 +38,17 @@ public class Options extends Account{
                 }
             }
             if(count == data.size()){
+                counter++;
                 System.out.println("Yanlis hesap numarsi veya pin numarsi girdiniz");
+                System.out.println("Herhangi bir rakama tiklayip isleme devam ediniz veya Q ya tiklayip cikiniz");
+                String exit = input.next();
+                if(exit.equalsIgnoreCase("q")){
+                    flag = false;
+                }
+            }
+            if(counter ==3){
+                System.out.println("3 kere hatali bilgi girilmistir ve hesabiniz dondurulmustur!!");
+                flag = false;
             }
         }while (flag);
     }
@@ -54,10 +65,10 @@ public class Options extends Account{
                     System.out.println("Checking hesabinizda kalan bakiye: "+moneyFormat.format(getCheckingBalance()));
                     break;
                 case 2:
-                    getCheckingWithdraw();
+                    getCheckingWithdraw();//hesabinizdan para cekme islemi yapiniz
                     break;
                 case 3:
-                    getCheckingDeposit();
+                    getCheckingDeposit();//hesabiniza para yatiriniz
                     break;
                 default:
                     System.out.println("Yanlis secenek! Lutfen 1,2,3 veya 4 u kullaniniz");
