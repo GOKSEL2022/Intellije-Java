@@ -4,6 +4,7 @@ import java.util.Scanner;
 
 public class IfStatement01 {
 
+
     public static void main(String[] args) {
 
         //Example 1: Kullanicidan alinan sayinin tek mi cift mi oldugunu ekrana yazan kodu yaziniz.

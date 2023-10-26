@@ -95,6 +95,7 @@ public class StringManipulations02 {
         int number = cumle.replaceAll("[^\\p{Punct}]", "").length();
         System.out.println(number);
 
+
         //Example 8: Verilen bir String "Al" ile basliyor ve "x" ile bitiyorsa ekrana "Harika" yazdirin
         //           aksi halde "Normal" yazdirin.
         String v = "Kalex";
