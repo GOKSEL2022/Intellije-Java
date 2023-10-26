@@ -9,7 +9,7 @@ public class LinkedListVeArrayListNotları {
             List'ler collection'lara dahil.
 
     Collection diyince bunlar aklınıza gelmeli:
-            1)List  i)ArrayList ii)LinkedList
+    1)List  i)ArrayList ii)LinkedList
     2)Set
     3)Queue
 
